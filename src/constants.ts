@@ -1,0 +1,1 @@
+export const WEATHER_API='https://api.open-meteo.com/v1/forecast?latitude=43.06&longitude=141.35&current_weather=true';
