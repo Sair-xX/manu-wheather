@@ -1,5 +1,5 @@
 import type {Res,CurrentWeather} from "../types";
-import {WHEATHER_API} from "../constants";
+import {WEATHER_API} from "../constants";
 import {useState,useRef,useEffect} from "react";
 
 export function useWeather(){
@@ -29,8 +29,8 @@ export function useWeather(){
         fetch(WEATHER_API)
 
             .then(res => res.json())
-            .then(data =>{
-                setWeather(data.current_weather);
+            .then(json =>{
+                setWeather(json.current_weather);
             })
             .catch(e=>{
                 setError( "天気の取得に失敗しました。")
